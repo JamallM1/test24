@@ -3,6 +3,7 @@ package com.galvanize;
 import java.net.URI;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -19,11 +20,16 @@ public class Stats {
         ata.add(4);
         ata.add(8);
     }
-    public class Browser {
-        private URI currentPage;
-        private ArrayList<String> history;
-        private LocalDateTime visitedAt;
-        private HashMap<String, Integer> visitCount;
-        private boolean on;
+    public static double computeAverage(List<Integer> avg) {
+        avg.add(2);
+        avg.add(7);
+        avg.add(9);
+        avg.add(11);
+        int sum = 0;
+        for (int num :avg){
+            sum += num;
+        }
+        return (double) sum / avg.size();
     }
+
 }

@@ -28,4 +28,15 @@ public class CalculatorTest {
             int result = example.doubleNumber(input);
             assertEquals(expected, result);
         }
+        @Test
+        public void testComputeAverage() {
+            List<Integer> numbers = new ArrayList<>();
+            numbers.add(2);
+            numbers.add(7);
+            numbers.add(9);
+            numbers.add(11);
+            double expectedAvg = (2 + 7 + 9 + 11) / (double) numbers.size();
+            double actualAvg = ComputeAverage.computeAverage(new ArrayList<>());
+            Assert.assertEquals(expectedAvg, actualAvg, 0.0001);
+        }
     }
